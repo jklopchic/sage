@@ -1,0 +1,200 @@
+/* Business Card CSS - 2" x 3" Format - Black & White */
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: 'Inter', Arial, sans-serif;
+    background: #f0f0f0;
+    padding: 20px;
+}
+
+/* Single card for preview */
+.business-card {
+    width: 3in;
+    height: 2in;
+    background: #ffffff;
+    border: 3px solid #000000;
+    border-radius: 8px;
+    margin: 10px;
+    overflow: hidden;
+    position: relative;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.3);
+}
+
+.card-front {
+    width: 100%;
+    height: 100%;
+    padding: 8px;
+    display: flex;
+    flex-direction: column;
+    color: black;
+}
+
+/* Header Section */
+.header-section {
+    text-align: center;
+    margin-bottom: 4px;
+}
+
+.missing-title {
+    font-size: 12px;
+    font-weight: 700;
+    color: #000000;
+    margin-bottom: 1px;
+    text-shadow: none;
+}
+
+.urgent-text {
+    font-size: 10px;
+    color: #000000;
+    font-weight: 600;
+    text-transform: uppercase;
+    letter-spacing: 0.5px;
+}
+
+/* Photo and QR Section */
+.photo-qr-section {
+    flex: 1;
+    display: flex;
+    justify-content: space-between;
+    align-items: flex-start;
+    margin-bottom: 6px;
+    gap: 10px;
+}
+
+.photo-container {
+    flex: 1;
+    display: flex;
+    justify-content: center;
+}
+
+.cat-image {
+    width: 130px;
+    height: 100px;
+    object-fit: cover;
+    border-radius: 4px;
+    border: 2px solid #000000;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.3);
+}
+
+/* Contact Section */
+.contact-section {
+    margin-bottom: 4px;
+}
+
+.contact-info {
+    text-align: center;
+}
+
+.phone {
+    font-size: 8px;
+    color: #000000;
+    margin-bottom: 1px;
+    font-weight: 600;
+}
+
+.address {
+    font-size: 6px;
+    color: #000000;
+    margin-bottom: 1px;
+    line-height: 1.2;
+}
+
+.website {
+    font-size: 7px;
+    color: #000000;
+    font-weight: 600;
+}
+
+/* QR Code Section */
+.qr-section {
+    text-align: center;
+    flex: 1;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: flex-start;
+}
+
+.qr-code {
+    margin-bottom: 3px;
+}
+
+.qr-image {
+    width: 100px;
+    height: 100px;
+    border: 2px solid #000000;
+    border-radius: 4px;
+    background: white;
+    padding: 2px;
+}
+
+.qr-text {
+    font-size: 7px;
+    color: #000000;
+    text-align: center;
+    font-weight: 600;
+}
+
+/* Reward Section */
+.reward-section {
+    text-align: center;
+}
+
+.reward-text {
+    font-size: 8px;
+    color: #000000;
+    background: #ffffff;
+    padding: 2px 6px;
+    border-radius: 3px;
+    font-weight: 600;
+    border: 2px solid #000000;
+    text-shadow: none;
+}
+
+/* Print Styles */
+@media print {
+    body {
+        background: white;
+        padding: 0;
+        margin: 0;
+    }
+    
+    .business-card {
+        width: 3in;
+        height: 2in;
+        margin: 0.1in;
+        box-shadow: none;
+        border: 2px solid #000;
+        page-break-inside: avoid;
+    }
+    
+    /* Ensure colors print correctly */
+    .business-card {
+        -webkit-print-color-adjust: exact;
+        color-adjust: exact;
+    }
+    
+    /* Print page setup */
+    @page {
+        size: 8.5in 11in;
+        margin: 0.5in;
+    }
+}
+
+/* Responsive adjustments for very small screens */
+@media screen and (max-width: 480px) {
+    .business-card {
+        width: 2.4in;
+        height: 1.6in;
+    }
+    
+    .card-row {
+        flex-direction: column;
+        align-items: center;
+    }
+}
