@@ -1,0 +1,111 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Lost Cat - Please Help Us Find Our Beloved Pet</title>
+    <link rel="stylesheet" href="styles.css">
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+</head>
+<body>
+    <div class="container">
+        <header class="header">
+            <h1 class="title">🐱 LOST CAT 🐱</h1>
+            <p class="subtitle">Please help us find our beloved pet</p>
+        </header>
+
+        <main class="main-content">
+            <div class="alert-box">
+                <h2>MISSING</h2>
+                <p class="missing-date">Last seen: [DATE] in [LOCATION]</p>
+            </div>
+
+            <div class="cat-info">
+                <div class="photo-gallery">
+                    <div class="photo-container">
+                        <img src="cat-photo-1.jpg" alt="Lost cat photo 1" class="cat-photo" onclick="openModal(this)">
+                        <p class="photo-caption">Recent photo of our cat</p>
+                    </div>
+                    <div class="photo-container">
+                        <img src="cat-photo-2.jpg" alt="Lost cat photo 2" class="cat-photo" onclick="openModal(this)">
+                        <p class="photo-caption">Another view</p>
+                    </div>
+                    <div class="photo-container">
+                        <img src="cat-photo-3.jpg" alt="Lost cat photo 3" class="cat-photo" onclick="openModal(this)">
+                        <p class="photo-caption">Side view</p>
+                    </div>
+                    <div class="photo-container">
+                        <img src="cat-photo-4.jpg" alt="Lost cat photo 4" class="cat-photo" onclick="openModal(this)">
+                        <p class="photo-caption">Full body view</p>
+                    </div>
+                </div>
+
+                <div class="details">
+                    <h3>Cat Details</h3>
+                    <ul class="details-list">
+                        <li><strong>Name:</strong> [CAT'S NAME]</li>
+                        <li><strong>Breed:</strong> [BREED]</li>
+                        <li><strong>Color:</strong> [COLOR DESCRIPTION]</li>
+                        <li><strong>Size:</strong> [SIZE DESCRIPTION]</li>
+                        <li><strong>Age:</strong> [AGE]</li>
+                        <li><strong>Special Features:</strong> [DISTINCTIVE MARKINGS/FEATURES]</li>
+                        <li><strong>Collar:</strong> [COLLAR DESCRIPTION IF ANY]</li>
+                    </ul>
+                </div>
+
+                <div class="location-info">
+                    <h3>Last Known Location</h3>
+                    <p class="location-details">
+                        <strong>Address:</strong> [STREET ADDRESS]<br>
+                        <strong>Area:</strong> [NEIGHBORHOOD/CITY]<br>
+                        <strong>Date & Time:</strong> [SPECIFIC DATE AND TIME]
+                    </p>
+                </div>
+            </div>
+
+            <div class="contact-section">
+                <h3>Contact Information</h3>
+                <div class="contact-info">
+                    <p><strong>Phone:</strong> <a href="tel:[PHONE_NUMBER]">[PHONE_NUMBER]</a></p>
+                    <p><strong>Email:</strong> <a href="mailto:[EMAIL]">[EMAIL]</a></p>
+                    <p class="reward-text">💰 <strong>REWARD OFFERED</strong> for safe return</p>
+                </div>
+            </div>
+
+            <div class="tips-section">
+                <h3>If You See Our Cat</h3>
+                <ul class="tips-list">
+                    <li>Please call immediately - don't try to catch</li>
+                    <li>Take a photo if possible</li>
+                    <li>Note the exact location and time</li>
+                    <li>Our cat may be scared and hiding</li>
+                </ul>
+            </div>
+
+            <div class="share-section">
+                <h3>Please Share</h3>
+                <p>Help us spread the word by sharing this page with friends, family, and on social media.</p>
+                <div class="share-buttons">
+                    <button onclick="shareOnFacebook()" class="share-btn facebook">Share on Facebook</button>
+                    <button onclick="shareOnTwitter()" class="share-btn twitter">Share on Twitter</button>
+                    <button onclick="copyLink()" class="share-btn copy">Copy Link</button>
+                </div>
+            </div>
+        </main>
+
+        <footer class="footer">
+            <p>Thank you for helping us find our beloved pet. Every share and every pair of eyes looking helps bring our cat home safely.</p>
+        </footer>
+    </div>
+
+    <!-- Modal for enlarged photos -->
+    <div id="photoModal" class="modal" onclick="closeModal()">
+        <div class="modal-content">
+            <span class="close">&times;</span>
+            <img id="modalImage" src="" alt="Enlarged cat photo">
+        </div>
+    </div>
+
+    <script src="script.js"></script>
+</body>
+</html>
